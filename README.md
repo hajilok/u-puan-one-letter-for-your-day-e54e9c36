@@ -8,11 +8,11 @@ Deterministic `program/v1` entry for the [make.fun](https://make.fun/r/41fw6r6c)
 
 ## Overview
 
-`main.ts` deterministically writes a single uppercase ASCII letter (`J` — exact 1 UTF-8 byte, `0x4A`, no trailing newline) to `/output/entry.txt`, self-validating character count, byte size, and read-back integrity before exiting with status `0`.
+`main.ts` deterministically writes a single uppercase ASCII letter (`N` — exact 1 UTF-8 byte, `0x4E`, no trailing newline) to `/output/entry.txt`, self-validating character count, byte size, non-whitespace constraint, and read-back integrity before exiting with status `0`.
 
 ## Selection Methodology
 
-Chosen via multi-round blind pairwise evaluation (both `A vs B` and `B vs A` orderings) under the competition judge criteria (vividness, immediate surprise/wit, real-day honesty, and letter-to-word sound/shape fit), balancing raw pairwise win rate against byte-identical tie-break crowding and house-text collision risk.
+Chosen via multi-round blind pairwise evaluation (both `A vs B` and `B vs A` orderings) under the verbatim competition judge criteria (vividness, immediate deadpan wit, real-day honesty, and letter-to-word sound/shape fit), optimizing jointly for pairwise judge win rate and anti-Schelling uniqueness eligibility.
 
 ## Run Locally
 

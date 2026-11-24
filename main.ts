@@ -8,7 +8,7 @@ import { dirname } from 'node:path';
  */
 
 const DEFAULT_OUTPUT_PATH = '/output/entry.txt';
-const SELECTED_LETTER = 'J';
+const SELECTED_LETTER = 'N';
 
 function resolveOutputPath(argv: readonly string[]): string {
   const outFlagIndex = argv.indexOf('--out');
@@ -27,8 +27,8 @@ function validateEntry(letter: string): void {
   if (codePoints.length !== 1) {
     throw new Error(`Expected exactly 1 Unicode character, got ${codePoints.length}`);
   }
-  if (!/^[A-Z]$/.test(letter)) {
-    throw new Error(`Expected a single uppercase ASCII letter A-Z, got ${JSON.stringify(letter)}`);
+  if (/^\s*$/.test(letter) || !/^[A-Z]$/.test(letter)) {
+    throw new Error(`Expected a single non-whitespace uppercase ASCII letter A-Z, got ${JSON.stringify(letter)}`);
   }
   const byteLength = Buffer.byteLength(letter, 'utf8');
   if (byteLength !== 1) {
